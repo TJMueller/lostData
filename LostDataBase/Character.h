@@ -20,7 +20,12 @@
 @property (nonatomic, retain) NSData * image;
 
 
-+ (Character *)itemWithName:(NSString *)characterName age:(NSString *)characterAge actor:(NSString *)characterActor gender:(NSString *)characterGender seat:(NSString *)planeSeat inManagedObjectContext:(NSManagedObjectContext *)context;
++ (Character *)itemWithName:(NSString *)characterName
+                        age:(NSString *)characterAge
+                      actor:(NSString *)characterActor
+                     gender:(NSString *)characterGender
+                       seat:(NSString *)planeSeat
+     inManagedObjectContext:(NSManagedObjectContext *)context;
 
 
 @end
