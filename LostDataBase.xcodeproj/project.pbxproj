@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231D1B5E1ACB499D0022A725 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 231D1B5D1ACB499D0022A725 /* Character.m */; };
+		231D1B611ACB53A20022A725 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231D1B601ACB53A20022A725 /* DetailViewController.m */; };
+		231D1B641ACB67310022A725 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = 231D1B631ACB67310022A725 /* lost.plist */; };
 		234A69A01ACB1E9A00CEADC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A699F1ACB1E9A00CEADC3 /* main.m */; };
 		234A69A31ACB1E9A00CEADC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 234A69A21ACB1E9A00CEADC3 /* AppDelegate.m */; };
 		234A69A61ACB1E9A00CEADC3 /* LostDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 234A69A41ACB1E9A00CEADC3 /* LostDataBase.xcdatamodeld */; };
@@ -28,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231D1B5C1ACB499D0022A725 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		231D1B5D1ACB499D0022A725 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
+		231D1B5F1ACB53A20022A725 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		231D1B601ACB53A20022A725 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		231D1B631ACB67310022A725 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
 		234A699A1ACB1E9A00CEADC3 /* LostDataBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostDataBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234A699E1ACB1E9A00CEADC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		234A699F1ACB1E9A00CEADC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231D1B621ACB53AE0022A725 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				234A69A71ACB1E9A00CEADC3 /* ViewController.h */,
+				234A69A81ACB1E9A00CEADC3 /* ViewController.m */,
+				231D1B5F1ACB53A20022A725 /* DetailViewController.h */,
+				231D1B601ACB53A20022A725 /* DetailViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		234A69911ACB1E9A00CEADC3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +104,9 @@
 			children = (
 				234A69A11ACB1E9A00CEADC3 /* AppDelegate.h */,
 				234A69A21ACB1E9A00CEADC3 /* AppDelegate.m */,
-				234A69A71ACB1E9A00CEADC3 /* ViewController.h */,
-				234A69A81ACB1E9A00CEADC3 /* ViewController.m */,
+				231D1B621ACB53AE0022A725 /* View */,
+				231D1B5C1ACB499D0022A725 /* Character.h */,
+				231D1B5D1ACB499D0022A725 /* Character.m */,
 				234A69AA1ACB1E9A00CEADC3 /* Main.storyboard */,
 				234A69AD1ACB1E9A00CEADC3 /* Images.xcassets */,
 				234A69AF1ACB1E9A00CEADC3 /* LaunchScreen.xib */,
@@ -99,6 +119,7 @@
 		234A699D1ACB1E9A00CEADC3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				231D1B631ACB67310022A725 /* lost.plist */,
 				234A699E1ACB1E9A00CEADC3 /* Info.plist */,
 				234A699F1ACB1E9A00CEADC3 /* main.m */,
 			);
@@ -204,6 +225,7 @@
 			files = (
 				234A69AC1ACB1E9A00CEADC3 /* Main.storyboard in Resources */,
 				234A69B11ACB1E9A00CEADC3 /* LaunchScreen.xib in Resources */,
+				231D1B641ACB67310022A725 /* lost.plist in Resources */,
 				234A69AE1ACB1E9A00CEADC3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				234A69A31ACB1E9A00CEADC3 /* AppDelegate.m in Sources */,
+				231D1B5E1ACB499D0022A725 /* Character.m in Sources */,
 				234A69A61ACB1E9A00CEADC3 /* LostDataBase.xcdatamodeld in Sources */,
 				234A69A91ACB1E9A00CEADC3 /* ViewController.m in Sources */,
 				234A69A01ACB1E9A00CEADC3 /* main.m in Sources */,
+				231D1B611ACB53A20022A725 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +442,7 @@
 				234A69C21ACB1E9A00CEADC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		234A69C31ACB1E9A00CEADC3 /* Build configuration list for PBXNativeTarget "LostDataBaseTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +451,7 @@
 				234A69C51ACB1E9A00CEADC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
