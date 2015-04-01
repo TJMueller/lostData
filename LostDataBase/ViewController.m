@@ -46,6 +46,7 @@
     }
 }
 
+
 -(void)viewWillAppear:(BOOL)animated {
     [self load];
 }
@@ -63,6 +64,7 @@
     request.sortDescriptors = @[sortDescriptor];
     self.characters = [self.moc executeFetchRequest:request error:nil];
     [self.characterTableView reloadData];
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 #pragma mark - Tableview Delegates
@@ -81,6 +83,7 @@
         cell.detailTextLabel.text = character.actor;
         //[[character valueForKey:@"actor"]stringValue];
     }
+    cell.imageView.image = [UIImage imageWithData:character.image];
     return cell;
 }
 

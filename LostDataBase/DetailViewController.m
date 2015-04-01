@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UIImagePickerControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *actorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *ageLabel;
@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *ageTF;
 @property (strong, nonatomic) IBOutlet UITextField *planeSeatTF;
 @property (strong, nonatomic) IBOutlet UITextField *genderTF;
+@property UIImagePickerController *picker;
 
 
 @end
@@ -48,6 +49,22 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     self.moc = appDelegate.managedObjectContext;
 
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.delegate = self;
+    self.imageView.image = [UIImage imageWithData:self.character.image];
+
+}
+-(IBAction) getPhoto:(id) sender {
+    self.picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [self presentModalViewController:self.picker animated:YES];
+}
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:^{
+
+    }];
+    self.imageView.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    self.character.image = UIImagePNGRepresentation(self.imageView.image);
+    [self.moc save:nil];
 }
 
 - (IBAction)onEditButtonTapped:(id)sender {

@@ -16,6 +16,7 @@
 @dynamic planeseat;
 @dynamic gender;
 @dynamic actor;
+@dynamic image;
 
 
 + (Character *)itemWithName:(NSString *)characterName age:(NSString *)characterAge actor:(NSString *)characterActor gender:(NSString *)characterGender seat:(NSString *)planeSeat inManagedObjectContext:(NSManagedObjectContext *)context {
@@ -26,6 +27,7 @@
     item.planeseat = planeSeat;
     item.gender = characterGender;
     item.actor = characterActor;
+    item.image = nil;
     return item;
 }
 

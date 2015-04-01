@@ -17,6 +17,8 @@
 @property (nonatomic, retain) NSString * age;
 @property (nonatomic, retain) NSString * planeseat;
 @property (nonatomic, retain) NSString * actor;
+@property (nonatomic, retain) NSData * image;
+
 
 + (Character *)itemWithName:(NSString *)characterName age:(NSString *)characterAge actor:(NSString *)characterActor gender:(NSString *)characterGender seat:(NSString *)planeSeat inManagedObjectContext:(NSManagedObjectContext *)context;
 
